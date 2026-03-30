@@ -9,10 +9,21 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="cbssports">
   <meta name="twitter:creator" content="@cbssports">
+  <!-- CBS Sports external stylesheets (from site-webcomponents repo) -->
+  <link rel="stylesheet" href="https://sportsfly.cbsistatic.com/fly-0862/bundles/sportsmediacss/css/v2/pages/esi/pre-esi-reset.css" />
+  <link rel="stylesheet" href="https://www.cbssports.com/_next/static/css/esi/layout.css" />
+  <link rel="stylesheet" href="https://sportsflyqa.cbsistatic.com/fly-08508/bundles/sportsmediacss/css/v2/default.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --global-nav-v2-offset: 0px;
+      --global-nav-v2-height: 65px;
+      --global-subnav-bar-height: 50px;
+      --global-nav-v2-header-total: calc(var(--global-nav-v2-offset) + var(--global-nav-v2-height) + var(--global-subnav-bar-height));
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -30,7 +41,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
+      height: var(--global-nav-v2-height);
       position: sticky;
       top: 0;
       z-index: 100;
