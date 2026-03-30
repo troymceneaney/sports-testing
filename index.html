@@ -119,6 +119,20 @@
     }
     .GlobalNavListItem:hover { border-bottom-color: #003DA5; color: #003DA5; }
 
+    .waffle-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0 10px;
+      height: var(--global-nav-v2-height);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #1a1a1a;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .waffle-btn:hover { border-bottom-color: #003DA5; color: #003DA5; }
+
     /* Secondary nav items (Watch, Fantasy, Betting) */
     .GlobalNavListItem--secondary {
       font-size: 1rem;
@@ -348,8 +362,22 @@
   <nav id="GlobalNav" role="navigation" aria-label="Main navigation">
     <div id="GlobalMainNavLinks">
 
-      <!-- Left section: primary sport tabs -->
+      <!-- Left section: waffle button + primary sport tabs -->
       <div class="GlobalNavSection GlobalNavSection--left" id="GlobalNavListPrimary">
+        <!-- WaffleMenu button (NavListButton type=waffle from NavListItems/index.tsx) -->
+        <button class="GlobalNavListItem waffle-btn" id="GlobalNavListItem-waffle" aria-label="All Sports Menu" title="All Sports Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M2 4c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M2 12c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M2 20c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M10 4c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M10 12c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M10 20c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M18 4c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M18 12c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+            <path fill="currentColor" d="M18 20c0-1.105 0.895-2 2-2s2 0.895 2 2c0 1.105-0.895 2-2 2s-2-0.895-2-2z"/>
+          </svg>
+        </button>
         <a class="GlobalNavListItem" href="https://www.cbssports.com/nfl/">NFL</a>
         <a class="GlobalNavListItem" href="https://www.cbssports.com/college-basketball/">NCAA BB</a>
         <a class="GlobalNavListItem" href="https://www.cbssports.com/nba/">NBA</a>
